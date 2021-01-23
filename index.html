@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="split left">
+        <div class="centered">
+            <h2>Play Tic Tac Toe Against the Minimax Algorithm</h2>
+            <table>
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table>
+            <div class="endgame">
+                <div class="text"></div>
+            </div>
+            <div style="text-align:center;">
+                <button onclick="startGame()">Replay</button>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="split right">
+        <div class="centered">
+            <h2>Visualize the Minimax Score Associated with each Square for the AI player decision</h2>
+            <table>
+                <tr>
+                    <td class="cell2" id="1"></td>
+                    <td class="cell2" id="2"></td>
+                    <td class="cell2" id="3"></td>
+                </tr>
+                <tr>
+                    <td class="cell2" id="4"></td>
+                    <td class="cell2" id="5"></td>
+                    <td class="cell2" id="6"></td>
+                </tr>
+                <tr>
+                    <td class="cell2" id="7"></td>
+                    <td class="cell2" id="8"></td>
+                    <td class="cell2" id="9"></td>
+                </tr>
+            </table>
+        </div>
+        <ol>
+            <li>The minimax algorithm is used to assign a score to each square.</li>
+            <li>The square with the highest score is chosen.</li>
+            <li>If two squares have the same score, the first square (from top left to bottom right) is chosen. 
+                <ul>
+                    <li>A score of -10 represent losing the game if both players play best moves until the end of the game.</li>
+                    <li>A score of 0 represent a tie game if both players play best moves.</li>  
+                    <li>A score of 10 represent a win if both players play best moves.</li>
+                </ul>
+            </li>
+
+        </ol>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
